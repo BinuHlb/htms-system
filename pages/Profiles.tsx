@@ -29,11 +29,11 @@ const Profiles: React.FC = () => {
             <div className="grid grid-cols-12 gap-8">
                 <div className="col-span-8 space-y-8">
                     {/* Hero Profile Card */}
-                    <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+                    <div className="bg-white rounded-3xl overflow-hidden">
                         <div className="h-32 bg-gradient-to-r from-primary/30 to-primary/10"></div>
                         <div className="px-10 pb-10 -mt-16 flex flex-col md:flex-row items-end gap-8">
                             <div className="relative">
-                                <div 
+                                <div
                                     className="size-40 rounded-[32px] border-8 border-white bg-slate-200 bg-center bg-cover shadow-2xl"
                                     style={{ backgroundImage: `url('https://picsum.photos/id/191/200/200')` }}
                                 />
@@ -57,7 +57,7 @@ const Profiles: React.FC = () => {
                     </div>
 
                     <div className="grid grid-cols-2 gap-8">
-                        <div className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm space-y-8">
+                        <div className="bg-white rounded-3xl p-8 space-y-8">
                             <div className="flex justify-between items-center">
                                 <h3 className="font-black text-lg flex items-center gap-3 tracking-tight">
                                     <span className="material-symbols-outlined text-primary fill-1">contact_phone</span>
@@ -81,7 +81,7 @@ const Profiles: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-3xl border border-slate-200 p-8 shadow-sm space-y-8">
+                        <div className="bg-white rounded-3xl p-8 space-y-8">
                             <div className="flex justify-between items-center">
                                 <h3 className="font-black text-lg flex items-center gap-3 tracking-tight">
                                     <span className="material-symbols-outlined text-primary fill-1">badge</span>
@@ -114,7 +114,7 @@ const Profiles: React.FC = () => {
                 </div>
 
                 <div className="col-span-4">
-                    <div className="bg-white rounded-3xl border border-slate-200 shadow-sm flex flex-col h-[calc(100vh-200px)] sticky top-24 overflow-hidden">
+                    <div className="bg-white rounded-3xl flex flex-col h-[calc(100vh-200px)] sticky top-24 overflow-hidden">
                         <div className="p-8 pb-4">
                             <h3 className="text-xl font-black text-slate-900 tracking-tight mb-6">Company Directory</h3>
                             <div className="relative">

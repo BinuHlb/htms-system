@@ -20,14 +20,14 @@ const Financials: React.FC = () => {
                     <div className="p-1.5 bg-primary/10 rounded-lg"><span className="material-symbols-outlined text-primary text-[20px] fill-1">payments</span></div>
                     <h2 className="text-xl font-bold text-slate-900">Loan Management</h2>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {[
                         { label: 'Active Loan Balance', val: '$4,250.00', trend: '-15%', note: 'Employee Personal Loan', tColor: 'text-red-500' },
                         { label: 'Total Disbursed', val: '$10,000.00', trend: '+0%', note: 'Disbursed Jan 2024', tColor: 'text-slate-400' },
                         { label: 'Next Installment', val: '$500.00', trend: 'July 15th', note: 'Automatic Deduction', tColor: 'text-primary' },
                     ].map((card, i) => (
-                        <div key={i} className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:shadow-md transition-all">
+                        <div key={i} className="bg-white p-6 rounded-3xl transition-all">
                             <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">{card.label}</p>
                             <div className="flex items-baseline gap-2">
                                 <h3 className="text-2xl font-black text-slate-900">{card.val}</h3>
@@ -38,7 +38,7 @@ const Financials: React.FC = () => {
                     ))}
                 </div>
 
-                <div className="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm">
+                <div className="bg-white p-8 rounded-3xl">
                     <div className="flex justify-between items-center mb-6">
                         <div>
                             <h4 className="font-black text-slate-900 text-lg">Repayment Progress</h4>
@@ -66,7 +66,7 @@ const Financials: React.FC = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     <div className="lg:col-span-5">
-                        <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm sticky top-24">
+                        <div className="bg-white rounded-3xl overflow-hidden sticky top-24">
                             <div className="p-1.5 flex bg-slate-50 border-b border-slate-100">
                                 <button className="flex-1 py-2.5 text-[10px] font-black rounded-xl bg-white shadow-sm text-primary uppercase tracking-widest">Domestic</button>
                                 <button className="flex-1 py-2.5 text-[10px] font-black text-slate-400 uppercase tracking-widest">International</button>
@@ -103,7 +103,7 @@ const Financials: React.FC = () => {
                     </div>
 
                     <div className="lg:col-span-7">
-                        <div className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
+                        <div className="bg-white rounded-3xl overflow-hidden">
                             <div className="px-6 py-5 border-b border-slate-100 flex justify-between items-center">
                                 <h3 className="font-black text-slate-900 tracking-tight">Recent Claims</h3>
                                 <button className="text-primary text-[10px] font-black uppercase tracking-widest hover:underline">View All</button>

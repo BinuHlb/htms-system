@@ -7,7 +7,7 @@ const Leave: React.FC = () => {
     const leaveBalances = [
         { type: 'Annual Leave', remaining: 12, total: 25, color: 'blue' },
         { type: 'Sick Leave', remaining: 5, total: 10, color: 'emerald' },
-        { type: 'Study Leave', remaining: 3, total: 5, color: 'amber' },
+        { type: 'Casual Leave', remaining: 3, total: 5, color: 'amber' },
         { type: 'Unpaid Leave', remaining: 2, total: 2, color: 'purple' },
     ];
 
@@ -18,7 +18,7 @@ const Leave: React.FC = () => {
                     <h2 className="text-3xl font-black tracking-tight font-display text-slate-900">Leave & Absence Hub</h2>
                     <p className="text-slate-500 mt-1 font-medium">Manage your time off requests and check balances.</p>
                 </div>
-                <button 
+                <button
                     onClick={() => setIsModalOpen(true)}
                     className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20"
                 >
@@ -28,32 +28,33 @@ const Leave: React.FC = () => {
             </div>
 
             <section>
-                <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-                    <span className="material-symbols-outlined text-primary">account_balance_wallet</span>
-                    Leave Balances
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="flex flex-wrap gap-8 items-center justify-start bg-white rounded-3xl p-8 mb-8">
                     {leaveBalances.map((leave, idx) => (
-                        <div key={idx} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                            <div className="flex justify-between items-start mb-4">
-                                <span className={`material-symbols-outlined p-2 rounded-lg bg-${leave.color}-100 text-${leave.color}-600`}>
-                                    {leave.type === 'Annual Leave' ? 'calendar_today' : 
-                                     leave.type === 'Sick Leave' ? 'medical_services' : 
-                                     leave.type === 'Study Leave' ? 'school' : 'event_busy'}
-                                </span>
-                                <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Total: {leave.total}</span>
+                        <div key={idx} className="group relative flex items-center gap-4 cursor-pointer">
+                            <div className="relative size-16">
+                                <svg className="size-full -rotate-90" viewBox="0 0 36 36">
+                                    <path className={`text-${leave.color}-100`} d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="4" />
+                                    <path className={`text-${leave.color}-500 transition-all duration-1000 ease-out`} strokeDasharray={`${(leave.remaining / leave.total) * 100}, 100`} d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" strokeWidth="4" strokeLinecap="round" />
+                                </svg>
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <span className={`material-symbols-outlined text-${leave.color}-500 text-xl`}>
+                                        {leave.type === 'Annual Leave' ? 'calendar_today' :
+                                            leave.type === 'Sick Leave' ? 'medical_services' :
+                                                leave.type === 'Casual Leave' ? 'weekend' : 'event_busy'}
+                                    </span>
+                                </div>
                             </div>
-                            <h4 className="text-sm font-bold text-slate-500 mb-1">{leave.type}</h4>
-                            <div className="flex items-baseline gap-1">
-                                <span className="text-3xl font-black text-slate-900">{leave.remaining}</span>
-                                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Days Left</span>
+
+                            <div>
+                                <h4 className="text-sm font-black text-slate-900 leading-tight group-hover:text-primary transition-colors">{leave.type}</h4>
+                                <div className="flex items-baseline gap-1 mt-0.5">
+                                    <span className="text-xl font-black text-slate-900">{leave.remaining}</span>
+                                    <span className="text-[10px] font-bold text-slate-400 uppercase">/ {leave.total} Days</span>
+                                </div>
                             </div>
-                            <div className="w-full bg-slate-100 h-2 rounded-full mt-4 overflow-hidden">
-                                <div 
-                                    className={`bg-${leave.color}-500 h-full rounded-full transition-all duration-1000`} 
-                                    style={{ width: `${(leave.remaining / leave.total) * 100}%` }}
-                                ></div>
-                            </div>
+
+                            {/* Tooltip-like detail on hover */}
+                            <div className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-slate-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </div>
                     ))}
                 </div>
@@ -61,7 +62,7 @@ const Leave: React.FC = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2 space-y-4">
-                    <div className="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+                    <div className="bg-white rounded-xl p-6">
                         <div className="flex items-center justify-between mb-6">
                             <h3 className="text-lg font-bold">Leave Planning</h3>
                             <div className="flex items-center bg-slate-50 border border-slate-200 rounded-lg overflow-hidden">
@@ -89,7 +90,7 @@ const Leave: React.FC = () => {
                 <div className="space-y-4">
                     <h3 className="text-lg font-bold">Recent History</h3>
                     <div className="space-y-3">
-                        <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm hover:border-primary transition-all cursor-pointer group">
+                        <div className="bg-white p-4 rounded-xl transition-all cursor-pointer group">
                             <div className="flex justify-between items-start mb-3">
                                 <span className="px-2.5 py-1 rounded bg-emerald-100 text-emerald-700 text-[10px] font-black uppercase tracking-widest">Approved</span>
                                 <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">2d ago</span>

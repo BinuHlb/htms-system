@@ -10,7 +10,7 @@ const Admin: React.FC = () => {
                     <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Workspace</h3>
                     <p className="text-xs font-bold text-slate-600">Departmental Operations</p>
                 </div>
-                
+
                 <nav className="space-y-1.5">
                     <button className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary font-bold text-sm shadow-sm ring-1 ring-primary/20">
                         <span className="material-symbols-outlined text-[20px] fill-1">group_add</span>
@@ -57,7 +57,7 @@ const Admin: React.FC = () => {
                 <div className="p-8 grid grid-cols-12 gap-8">
                     <div className="col-span-12 lg:col-span-8 space-y-6">
                         {/* Employee Selector */}
-                        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div className="bg-white rounded-3xl overflow-hidden">
                             <div className="p-4 bg-slate-50/50 border-b border-slate-100">
                                 <h2 className="text-sm font-black text-slate-900 flex items-center gap-2 uppercase tracking-tight">
                                     <span className="material-symbols-outlined text-primary font-bold">person_search</span>
@@ -83,7 +83,7 @@ const Admin: React.FC = () => {
 
                                 <div className="mt-8 p-5 bg-primary/5 rounded-2xl border border-primary/30 flex items-center justify-between animate-in slide-in-from-top-2">
                                     <div className="flex items-center gap-4">
-                                        <div 
+                                        <div
                                             className="size-16 rounded-2xl border-2 border-primary bg-center bg-cover shadow-sm"
                                             style={{ backgroundImage: `url('https://picsum.photos/id/177/100/100')` }}
                                         />
@@ -102,7 +102,7 @@ const Admin: React.FC = () => {
                         </div>
 
                         {/* Action Tabs */}
-                        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden min-h-[400px]">
+                        <div className="bg-white rounded-3xl overflow-hidden min-h-[400px]">
                             <div className="flex border-b border-slate-100 bg-slate-50/30 overflow-x-auto scrollbar-hide">
                                 {['Leave Request', 'Loan/Advance', 'Attendance Adjust', 'Expense Claim'].map((tab, i) => (
                                     <button key={i} className={`px-8 py-5 text-[11px] font-black uppercase tracking-widest whitespace-nowrap transition-all border-b-2
@@ -150,7 +150,7 @@ const Admin: React.FC = () => {
                     </div>
 
                     <div className="col-span-12 lg:col-span-4">
-                        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-full sticky top-24">
+                        <div className="bg-white rounded-3xl flex flex-col h-full sticky top-24">
                             <div className="p-6 border-b border-slate-100 flex items-center justify-between">
                                 <div>
                                     <h2 className="text-slate-900 font-black tracking-tight">Pending Approvals</h2>

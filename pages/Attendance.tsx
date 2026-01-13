@@ -40,7 +40,7 @@ const Attendance: React.FC = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {stats.map((stat, idx) => (
-                    <div key={idx} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <div key={idx} className="bg-white p-6 rounded-2xl">
                         <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{stat.label}</p>
                         <div className="flex items-center justify-between mt-2">
                             <p className="text-2xl font-black text-slate-900">{stat.value}</p>
@@ -52,7 +52,7 @@ const Attendance: React.FC = () => {
                 ))}
             </div>
 
-            <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+            <div className="bg-white rounded-3xl overflow-hidden flex flex-col">
                 <div className="p-4 border-b border-slate-100 flex items-center justify-between">
                     <div className="flex items-center gap-4">
                         <div className="flex bg-slate-50 p-1 rounded-lg border border-slate-200">
@@ -104,9 +104,9 @@ const Attendance: React.FC = () => {
                                                 </div>
                                             ) : (
                                                 <div className={`p-2.5 rounded-lg border flex flex-col items-center transition-transform hover:scale-105 cursor-pointer shadow-sm
-                                                    ${shift.startsWith('D') ? 'bg-emerald-50 border-emerald-200 text-emerald-700' : 
-                                                      shift.startsWith('A') ? 'bg-amber-50 border-amber-200 text-amber-700' : 
-                                                      'bg-indigo-50 border-indigo-200 text-indigo-700'}
+                                                    ${shift.startsWith('D') ? 'bg-emerald-50 border-emerald-200 text-emerald-700' :
+                                                        shift.startsWith('A') ? 'bg-amber-50 border-amber-200 text-amber-700' :
+                                                            'bg-indigo-50 border-indigo-200 text-indigo-700'}
                                                 `}>
                                                     <span className="text-[10px] font-black uppercase tracking-widest">{shift}</span>
                                                     <span className="text-[9px] font-bold opacity-70 mt-1 whitespace-nowrap">

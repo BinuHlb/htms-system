@@ -9,6 +9,7 @@ import Attendance from './pages/Attendance';
 import Financials from './pages/Financials';
 import Admin from './pages/Admin';
 import Profiles from './pages/Profiles';
+import Employees from './pages/Employees';
 import { Page } from './types';
 
 const App: React.FC = () => {
@@ -24,6 +25,7 @@ const App: React.FC = () => {
                         <Routes>
                             <Route path="/dashboard" element={<Dashboard />} />
                             <Route path="/profiles" element={<Profiles />} />
+                            <Route path="/employees" element={<Employees />} />
                             <Route path="/leave" element={<Leave />} />
                             <Route path="/attendance" element={<Attendance />} />
                             <Route path="/financials" element={<Financials />} />

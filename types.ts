@@ -2,6 +2,7 @@
 export enum Page {
     Dashboard = 'dashboard',
     Profiles = 'profiles',
+    Employees = 'employees',
     Leave = 'leave',
     Attendance = 'attendance',
     Financials = 'financials',

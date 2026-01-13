@@ -19,7 +19,7 @@ const Dashboard: React.FC = () => {
         <div className="p-8 max-w-[1400px] mx-auto w-full space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div className="flex items-end justify-between">
                 <div>
-                    <h2 className="text-3xl font-black tracking-tight font-display text-slate-900">Dashboard Overview</h2>
+                    <h2 className="text-3xl font-bold tracking-tight font-display text-slate-900">Dashboard Overview</h2>
                     <p className="text-slate-500 mt-1 font-medium">Welcome back, Alex. Here's what's happening today.</p>
                 </div>
                 <div className="flex gap-3">
@@ -37,7 +37,7 @@ const Dashboard: React.FC = () => {
             <div className="grid grid-cols-12 gap-6">
                 <div className="col-span-8 space-y-6">
                     {/* Weekly Attendance */}
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div className="bg-white rounded-3xl p-8">
                         <div className="flex items-center justify-between mb-6">
                             <h3 className="font-bold text-lg flex items-center gap-2">
                                 <span className="material-symbols-outlined text-primary fill-1">calendar_month</span>
@@ -47,17 +47,17 @@ const Dashboard: React.FC = () => {
                         </div>
                         <div className="grid grid-cols-5 gap-4">
                             {attendanceData.map((item, idx) => (
-                                <div key={idx} className={`${item.bg} ${item.ring || ''} ${item.opacity || ''} p-5 rounded-xl border border-slate-100 text-center transition-all hover:shadow-md`}>
+                                <div key={idx} className={`${item.bg} ${item.ring || ''} ${item.opacity || ''} p-5 rounded-2xl text-center transition-all hover:translate-y-[-2px]`}>
                                     <p className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">{item.day}</p>
-                                    <p className="text-2xl font-black mt-2 text-slate-900">{item.time}</p>
-                                    <p className={`text-[10px] ${item.color} font-black uppercase mt-2 tracking-tighter`}>{item.status}</p>
+                                    <p className="text-2xl font-bold mt-2 text-slate-900">{item.time}</p>
+                                    <p className={`text-[10px] ${item.color} font-bold uppercase mt-2 tracking-tighter`}>{item.status}</p>
                                 </div>
                             ))}
                         </div>
                         <div className="mt-8 flex items-center gap-10 pt-6 border-t border-slate-50">
                             <div className="flex flex-col">
                                 <span className="text-[10px] uppercase tracking-widest font-bold text-slate-400">Weekly Total</span>
-                                <span className="text-xl font-black text-slate-900 mt-1">24h 42m</span>
+                                <span className="text-xl font-bold text-slate-900 mt-1">24h 42m</span>
                             </div>
                             <div className="h-8 w-px bg-slate-100"></div>
                             <div className="flex flex-col">
@@ -68,7 +68,7 @@ const Dashboard: React.FC = () => {
                     </div>
 
                     {/* Pending Approvals */}
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200">
+                    <div className="bg-white rounded-3xl p-8">
                         <div className="flex items-center justify-between mb-6">
                             <h3 className="font-bold text-lg flex items-center gap-2">
                                 <span className="material-symbols-outlined text-primary fill-1">rule</span>
@@ -79,9 +79,9 @@ const Dashboard: React.FC = () => {
                         </div>
                         <div className="space-y-3">
                             {pendingApprovals.map((req) => (
-                                <div key={req.id} className="flex items-center justify-between p-4 rounded-xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-md transition-all cursor-pointer">
+                                <div key={req.id} className="flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-white transition-all cursor-pointer group">
                                     <div className="flex items-center gap-4">
-                                        <div 
+                                        <div
                                             className="size-11 rounded-full bg-slate-200 bg-center bg-cover border-2 border-white shadow-sm"
                                             style={{ backgroundImage: `url(${req.avatar})` }}
                                         />
@@ -106,26 +106,39 @@ const Dashboard: React.FC = () => {
 
                 <div className="col-span-4 space-y-6">
                     {/* Leave Balance */}
-                    <div className="bg-primary rounded-xl p-6 text-white shadow-lg shadow-primary/20 relative overflow-hidden group">
-                        <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:scale-125 transition-transform">
-                            <span className="material-symbols-outlined text-7xl">beach_access</span>
+                    {/* Leave Balance */}
+                    <div className="bg-white rounded-3xl p-6 relative overflow-hidden group transition-all duration-300">
+                        <div className="flex items-center justify-between mb-4">
+                            <h3 className="text-sm font-bold text-slate-500">Annual Leave</h3>
+                            <button className="size-8 rounded-full bg-slate-50 hover:bg-primary hover:text-white text-slate-400 flex items-center justify-center transition-all group-hover:scale-110">
+                                <span className="material-symbols-outlined text-lg">add</span>
+                            </button>
                         </div>
-                        <h3 className="text-sm font-bold opacity-80 flex items-center gap-2 mb-6">
-                            <span className="material-symbols-outlined text-lg">beach_access</span>
-                            Annual Leave Balance
-                        </h3>
-                        <div className="flex items-end justify-between">
-                            <span className="text-5xl font-black font-display">14.5</span>
-                            <span className="text-xs font-black bg-white/30 px-2.5 py-1.5 rounded-lg uppercase tracking-widest">Days Left</span>
+
+                        <div className="flex items-center gap-4">
+                            <div className="relative size-16">
+                                <svg className="size-full -rotate-90" viewBox="0 0 36 36">
+                                    <path className="text-slate-100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" strokeWidth="3" />
+                                    <path className="text-primary stroke-current" strokeDasharray="65, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" strokeWidth="3" strokeLinecap="round" />
+                                </svg>
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <span className="material-symbols-outlined text-primary text-xl">beach_access</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div className="text-4xl font-bold text-slate-900 leading-none group-hover:text-primary transition-colors">14.5</div>
+                                <div className="text-xs font-medium text-slate-400 mt-1">Days Available</div>
+                            </div>
                         </div>
-                        <div className="mt-6 bg-white/20 h-2 rounded-full overflow-hidden">
-                            <div className="bg-white h-full transition-all duration-1000" style={{ width: '65%' }}></div>
+
+                        <div className="mt-4 pt-4 border-t border-slate-50 flex items-center justify-between opacity-60 group-hover:opacity-100 transition-opacity">
+                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Accrual: Nov 1</span>
+                            <span className="text-[10px] font-bold text-primary cursor-pointer hover:underline">View History</span>
                         </div>
-                        <p className="mt-4 text-[10px] font-bold opacity-70 uppercase tracking-widest">Next accrual: Nov 1, 2024</p>
                     </div>
 
                     {/* News & Circulars */}
-                    <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div className="bg-white rounded-3xl overflow-hidden">
                         <div className="p-6 pb-2">
                             <h3 className="font-bold text-lg flex items-center gap-2">
                                 <span className="material-symbols-outlined text-primary fill-1">campaign</span>
@@ -150,7 +163,7 @@ const Dashboard: React.FC = () => {
                     </div>
 
                     {/* Mini Stats */}
-                    <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 space-y-5">
+                    <div className="bg-white rounded-3xl p-8 space-y-6">
                         <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <div className="p-2 rounded-lg bg-amber-100 text-amber-600">

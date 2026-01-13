@@ -11,6 +11,7 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ activePage, onPageChange }) => {
     const navItems = [
         { id: Page.Dashboard, label: 'Dashboard', icon: 'dashboard', path: '/dashboard' },
+        { id: Page.Employees, label: 'Employees', icon: 'groups', path: '/employees' },
         { id: Page.Profiles, label: 'Profiles', icon: 'person', path: '/profiles' },
         { id: Page.Leave, label: 'Leave', icon: 'calendar_today', path: '/leave' },
         { id: Page.Attendance, label: 'Time & Attendance', icon: 'schedule', path: '/attendance' },
@@ -21,12 +22,12 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, onPageChange }) => {
     return (
         <aside className="w-64 flex-shrink-0 flex flex-col bg-white dark:bg-[#111722] border-r border-slate-200 dark:border-slate-800 z-20">
             <div className="p-6 flex items-center gap-3">
-                <div className="bg-primary size-10 rounded-lg flex items-center justify-center text-white shadow-sm">
-                    <span className="material-symbols-outlined font-bold">corporate_fare</span>
+                <div className="bg-primary size-10 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
+                    <span className="material-symbols-outlined font-bold">cloud_circle</span>
                 </div>
                 <div className="flex flex-col">
-                    <h1 className="text-base font-bold leading-none font-display">HRMS Central</h1>
-                    <p className="text-slate-500 text-[10px] uppercase tracking-widest font-bold mt-1">Management Portal</p>
+                    <h1 className="text-base font-bold leading-none font-display">HRMS</h1>
+                    <p className="text-slate-500 text-[10px] uppercase tracking-widest font-bold mt-1">Management</p>
                 </div>
             </div>
 
@@ -37,9 +38,9 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, onPageChange }) => {
                         to={item.path}
                         onClick={() => onPageChange(item.id)}
                         className={({ isActive }) => `
-                            flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200
-                            ${isActive 
-                                ? 'bg-primary/10 text-primary shadow-sm ring-1 ring-primary/20' 
+                            flex items-center gap-3 px-4 py-3 rounded-2xl transition-all duration-300 font-medium
+                            ${isActive
+                                ? 'bg-primary text-white shadow-lg shadow-primary/25'
                                 : 'text-slate-500 hover:bg-slate-50 hover:text-slate-900'}
                         `}
                     >
@@ -53,7 +54,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, onPageChange }) => {
 
             <div className="p-4 mt-auto border-t border-slate-100">
                 <div className="flex items-center gap-3 px-2 py-3 bg-slate-50 rounded-xl">
-                    <div 
+                    <div
                         className="size-10 rounded-full bg-slate-300 bg-center bg-cover border border-white"
                         style={{ backgroundImage: `url('https://picsum.photos/id/64/100/100')` }}
                     />

@@ -1,0 +1,40 @@
+
+import React, { useState } from 'react';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import Dashboard from './pages/Dashboard';
+import Leave from './pages/Leave';
+import Attendance from './pages/Attendance';
+import Financials from './pages/Financials';
+import Admin from './pages/Admin';
+import Profiles from './pages/Profiles';
+import { Page } from './types';
+
+const App: React.FC = () => {
+    const [currentPage, setCurrentPage] = useState<Page>(Page.Dashboard);
+
+    return (
+        <HashRouter>
+            <div className="flex h-screen overflow-hidden font-sans">
+                <Sidebar activePage={currentPage} onPageChange={setCurrentPage} />
+                <div className="flex-1 flex flex-col min-w-0 bg-background-light dark:bg-background-dark overflow-hidden">
+                    <Header />
+                    <main className="flex-1 overflow-y-auto overflow-x-hidden">
+                        <Routes>
+                            <Route path="/dashboard" element={<Dashboard />} />
+                            <Route path="/profiles" element={<Profiles />} />
+                            <Route path="/leave" element={<Leave />} />
+                            <Route path="/attendance" element={<Attendance />} />
+                            <Route path="/financials" element={<Financials />} />
+                            <Route path="/admin" element={<Admin />} />
+                            <Route path="*" element={<Navigate to="/dashboard" replace />} />
+                        </Routes>
+                    </main>
+                </div>
+            </div>
+        </HashRouter>
+    );
+};
+
+export default App;

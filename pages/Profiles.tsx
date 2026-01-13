@@ -20,7 +20,7 @@ const Profiles: React.FC = () => {
                     <button className="px-5 py-2.5 rounded-xl border border-slate-200 bg-white font-bold text-sm shadow-sm flex items-center gap-2">
                         <span className="material-symbols-outlined text-lg">print</span> Export CV
                     </button>
-                    <button className="px-6 py-2.5 rounded-xl bg-primary text-white font-bold text-sm shadow-xl shadow-primary/20 flex items-center gap-2">
+                    <button className="px-6 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-900 font-bold text-sm shadow-sm flex items-center gap-2 transition-all">
                         <span className="material-symbols-outlined text-lg">download</span> Download Payslip
                     </button>
                 </div>

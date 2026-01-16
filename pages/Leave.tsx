@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PageSubHeader from '../components/PageSubHeader';
 import PageContent from '../components/PageContent';
 import LeaveBalanceCard, { LeaveBalance } from '../components/leave/LeaveBalanceCard';
 import LeavePlanningCalendar from '../components/leave/LeavePlanningCalendar';
@@ -108,10 +107,7 @@ const Leave: React.FC = () => {
 
     return (
         <div className="p-8 max-w-[1400px] mx-auto w-full space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <PageSubHeader
-                title="Leave & Absence Hub"
-                subtitle="Manage your time off requests and check balances."
-            />
+
 
             <PageContent
                 layout="standard"

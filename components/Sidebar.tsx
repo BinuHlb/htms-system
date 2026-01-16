@@ -22,13 +22,15 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, onPageChange }) => {
 
     return (
         <aside className="w-64 flex-shrink-0 flex flex-col bg-white dark:bg-[#111722] border-r border-slate-200 dark:border-slate-800 z-20">
-            <div className="p-6 flex items-center gap-3">
-                <div className="bg-primary size-10 rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/20">
-                    <span className="material-symbols-outlined font-bold">cloud_circle</span>
+            <div className="p-8 flex items-center gap-4 group cursor-pointer">
+                <div className="size-11 rounded-[1.25rem] bg-gradient-to-br from-primary to-emerald-400 flex items-center justify-center shadow-xl shadow-primary/20 transition-all hover:scale-110 active:scale-95 group-hover:rotate-3">
+                    <span className="material-symbols-outlined text-white text-2xl fill-1 transition-transform group-hover:rotate-12">all_inclusive</span>
                 </div>
                 <div className="flex flex-col">
-                    <h1 className="text-base font-bold leading-none font-display dark:text-white">HRMS</h1>
-                    <p className="text-slate-500 dark:text-slate-400 text-[12px] uppercase tracking-widest font-bold mt-1">Management</p>
+                    <h1 className="text-xl font-bold leading-none tracking-tight dark:text-white bg-gradient-to-r from-primary to-emerald-400 bg-clip-text text-transparent">
+                        Sage
+                    </h1>
+                    <p className="text-slate-500 dark:text-slate-400 text-[12px] uppercase tracking-[0.25em] font-bold mt-1 opacity-80">People First</p>
                 </div>
             </div>
 

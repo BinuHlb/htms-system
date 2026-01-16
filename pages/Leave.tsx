@@ -6,6 +6,7 @@ import LeavePlanningCalendar from '../components/leave/LeavePlanningCalendar';
 import LeaveHistoryCard, { LeaveHistoryItem } from '../components/leave/LeaveHistoryCard';
 
 import LeaveRequestCard from '../components/leave/LeaveRequestCard';
+import PendingLeaveRequests, { PendingRequest } from '../components/leave/PendingLeaveRequests';
 
 export interface EmployeeLeave {
     id: string;
@@ -25,6 +26,33 @@ const Leave: React.FC = () => {
 
     const [history, setHistory] = useState<LeaveHistoryItem[]>([
         { id: '1', type: 'Annual Leave', start: '2024-05-07', end: '2024-05-09', days: 3, status: 'Completed', date: '2d ago' },
+    ]);
+
+    const [pendingRequests, setPendingRequests] = useState<PendingRequest[]>([
+        {
+            id: 'req-1',
+            type: 'Annual Leave',
+            start: '2026-02-12',
+            end: '2026-02-15',
+            days: 4,
+            approvers: [
+                { name: 'John Doe', role: 'Manager', status: 'approved' },
+                { name: 'Sarah Chen', role: 'HR', status: 'pending' },
+                { name: 'Marcus T', role: 'Director', status: 'pending' },
+            ]
+        },
+        {
+            id: 'req-2',
+            type: 'Casual Leave',
+            start: '2026-02-25',
+            end: '2026-02-25',
+            days: 1,
+            approvers: [
+                { name: 'John Doe', role: 'Manager', status: 'approved' },
+                { name: 'Sarah Chen', role: 'HR', status: 'approved' },
+                { name: 'Marcus T', role: 'Director', status: 'rejected' },
+            ]
+        }
     ]);
 
     const [planningDates, setPlanningDates] = useState<string[]>(['2026-01-14', '2026-01-22']);
@@ -91,6 +119,9 @@ const Leave: React.FC = () => {
                 main={
                     <div className="space-y-8">
                         <LeaveBalanceCard balances={balances} />
+
+                        <PendingLeaveRequests requests={pendingRequests} />
+
                         <LeavePlanningCalendar
                             selectedDates={planningDates}
                             teamDates={allTeamLeaveDates}

@@ -5,8 +5,9 @@ export enum Page {
     Employees = 'employees',
     Leave = 'leave',
     Attendance = 'attendance',
-    Financials = 'financials',
-    Admin = 'admin'
+    Loan = 'loan',
+    Expense = 'expense',
+    OtherRequests = 'other-requests'
 }
 
 export interface Employee {

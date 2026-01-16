@@ -6,8 +6,9 @@ import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import Leave from './pages/Leave';
 import Attendance from './pages/Attendance';
-import Financials from './pages/Financials';
-import Admin from './pages/Admin';
+import Loans from './pages/Loans';
+import Expenses from './pages/Expenses';
+import OtherRequests from './pages/OtherRequests';
 import Profiles from './pages/Profiles';
 import Employees from './pages/Employees';
 import { Page } from './types';
@@ -28,8 +29,9 @@ const App: React.FC = () => {
                             <Route path="/employees" element={<Employees />} />
                             <Route path="/leave" element={<Leave />} />
                             <Route path="/attendance" element={<Attendance />} />
-                            <Route path="/financials" element={<Financials />} />
-                            <Route path="/admin" element={<Admin />} />
+                            <Route path="/loans" element={<Loans />} />
+                            <Route path="/expenses" element={<Expenses />} />
+                            <Route path="/other-requests" element={<OtherRequests />} />
                             <Route path="*" element={<Navigate to="/dashboard" replace />} />
                         </Routes>
                     </main>

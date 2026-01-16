@@ -46,10 +46,10 @@ const LeaveBalanceCard: React.FC<LeaveBalanceCardProps> = ({
                     </div>
 
                     <div>
-                        <h4 className="text-sm font-black text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">{leave.type}</h4>
+                        <h4 className="text-sm font-bold text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">{leave.type}</h4>
                         <div className="flex items-baseline gap-1 mt-0.5">
-                            <span className="text-xl font-black text-slate-900 dark:text-white">{leave.remaining}</span>
-                            <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">/ {leave.total} Days</span>
+                            <span className="text-xl font-bold text-slate-900 dark:text-white">{leave.remaining}</span>
+                            <span className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase">/ {leave.total} Days</span>
                         </div>
                     </div>
                 </div>

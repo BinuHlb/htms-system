@@ -27,12 +27,12 @@ const Profiles: React.FC = () => {
             value: (
                 <div className="flex gap-3">
                     <div className="flex-1 p-3 bg-slate-50 rounded-xl border border-slate-100 text-center">
-                        <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Passport</p>
-                        <p className="text-[10px] font-black text-primary mt-1 uppercase">Verified</p>
+                        <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Passport</p>
+                        <p className="text-[12px] font-bold text-primary mt-1 uppercase">Verified</p>
                     </div>
                     <div className="flex-1 p-3 bg-slate-50 rounded-xl border border-slate-100 text-center">
-                        <p className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Visa</p>
-                        <p className="text-[10px] font-black text-slate-400 mt-1 uppercase">N/A</p>
+                        <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">Visa</p>
+                        <p className="text-[12px] font-bold text-slate-400 mt-1 uppercase">N/A</p>
                     </div>
                 </div>
             )

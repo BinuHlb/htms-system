@@ -23,14 +23,14 @@ const InfoCard: React.FC<InfoCardProps> = ({
     return (
         <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 space-y-8 h-full border border-transparent dark:border-slate-800">
             <div className="flex justify-between items-center">
-                <h3 className="font-black text-lg flex items-center gap-3 tracking-tight dark:text-white">
+                <h3 className="font-bold text-lg flex items-center gap-3 tracking-tight dark:text-white">
                     <span className="material-symbols-outlined text-primary fill-1">{icon}</span>
                     {title}
                 </h3>
                 {editable && (
                     <button
                         onClick={onEditClick}
-                        className="text-primary font-black uppercase text-[10px] tracking-widest hover:underline"
+                        className="text-primary font-bold uppercase text-[12px] tracking-widest hover:underline"
                     >
                         Edit
                     </button>
@@ -39,7 +39,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
             <div className="space-y-6">
                 {items.map((item, idx) => (
                     <div key={idx}>
-                        <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">{item.label}</p>
+                        <p className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">{item.label}</p>
                         <div className="text-sm font-bold text-slate-900 dark:text-slate-200 mt-1">{item.value}</div>
                     </div>
                 ))}

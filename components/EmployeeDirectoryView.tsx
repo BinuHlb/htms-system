@@ -30,11 +30,11 @@ const EmployeeDirectoryView: React.FC<EmployeeDirectoryViewProps> = ({ employees
                     />
                 </div>
                 <div className="flex gap-3">
-                    <button className="flex items-center gap-2 px-5 py-3.5 bg-slate-50 dark:bg-slate-800 rounded-2xl text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-white hover:bg-primary/5 dark:hover:bg-primary/10 transition-all text-sm font-black uppercase tracking-widest border border-transparent hover:border-primary/10">
+                    <button className="flex items-center gap-2 px-5 py-3.5 bg-slate-50 dark:bg-slate-800 rounded-2xl text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-white hover:bg-primary/5 dark:hover:bg-primary/10 transition-all text-sm font-bold uppercase tracking-widest border border-transparent hover:border-primary/10">
                         <span className="material-symbols-outlined text-xl">filter_list</span>
                         Filter
                     </button>
-                    <button className="flex items-center gap-2 px-5 py-3.5 bg-slate-50 dark:bg-slate-800 rounded-2xl text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-white hover:bg-primary/5 dark:hover:bg-primary/10 transition-all text-sm font-black uppercase tracking-widest border border-transparent hover:border-primary/10">
+                    <button className="flex items-center gap-2 px-5 py-3.5 bg-slate-50 dark:bg-slate-800 rounded-2xl text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-white hover:bg-primary/5 dark:hover:bg-primary/10 transition-all text-sm font-bold uppercase tracking-widest border border-transparent hover:border-primary/10">
                         <span className="material-symbols-outlined text-xl">grid_view</span>
                         Layout
                     </button>
@@ -59,13 +59,13 @@ const EmployeeDirectoryView: React.FC<EmployeeDirectoryViewProps> = ({ employees
                                 <div className="absolute bottom-1 right-1 size-6 bg-green-500 border-4 border-white dark:border-slate-800 rounded-full z-20 shadow-sm animate-pulse" />
                             </div>
 
-                            <h3 className="text-xl font-black text-slate-900 dark:text-white tracking-tight leading-none">{emp.name}</h3>
-                            <p className="text-xs font-black text-primary mt-2 uppercase tracking-widest">{emp.role}</p>
-                            <p className="text-[10px] uppercase font-black text-slate-400 dark:text-slate-500 tracking-[0.2em] mt-2 py-1 px-3 bg-slate-50 dark:bg-slate-900/50 rounded-full">{emp.dept}</p>
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight leading-none">{emp.name}</h3>
+                            <p className="text-xs font-bold text-primary mt-2 uppercase tracking-widest">{emp.role}</p>
+                            <p className="text-[12px] uppercase font-bold text-slate-400 dark:text-slate-500 tracking-[0.2em] mt-2 py-1 px-3 bg-slate-50 dark:bg-slate-900/50 rounded-full">{emp.dept}</p>
 
                             <div className="flex gap-3 mt-8 w-full">
-                                <button className="flex-1 py-3 rounded-xl bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-black text-[10px] uppercase tracking-widest hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">Message</button>
-                                <button className="flex-1 py-3 rounded-xl bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-black text-[10px] uppercase tracking-widest hover:bg-slate-900 dark:hover:bg-slate-100 dark:hover:text-slate-900 hover:text-white hover:shadow-lg transition-all active:scale-95">Profile</button>
+                                <button className="flex-1 py-3 rounded-xl bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-[12px] uppercase tracking-widest hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">Message</button>
+                                <button className="flex-1 py-3 rounded-xl bg-slate-50 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold text-[12px] uppercase tracking-widest hover:bg-slate-900 dark:hover:bg-slate-100 dark:hover:text-slate-900 hover:text-white hover:shadow-lg transition-all active:scale-95">Profile</button>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@ const EmployeeDirectoryView: React.FC<EmployeeDirectoryViewProps> = ({ employees
                 {filteredEmployees.length === 0 && (
                     <div className="col-span-full py-20 flex flex-col items-center justify-center text-slate-300 dark:text-slate-700">
                         <span className="material-symbols-outlined text-6xl mb-4">search_off</span>
-                        <p className="text-sm font-black uppercase tracking-widest">No employees found matching your search</p>
+                        <p className="text-sm font-bold uppercase tracking-widest">No employees found matching your search</p>
                     </div>
                 )}
             </div>

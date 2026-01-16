@@ -28,7 +28,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, onPageChange }) => {
                 </div>
                 <div className="flex flex-col">
                     <h1 className="text-base font-bold leading-none font-display dark:text-white">HRMS</h1>
-                    <p className="text-slate-500 dark:text-slate-400 text-[10px] uppercase tracking-widest font-bold mt-1">Management</p>
+                    <p className="text-slate-500 dark:text-slate-400 text-[12px] uppercase tracking-widest font-bold mt-1">Management</p>
                 </div>
             </div>
 
@@ -61,7 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activePage, onPageChange }) => {
                     />
                     <div className="flex flex-col overflow-hidden">
                         <p className="text-xs font-bold text-slate-900 dark:text-white truncate">Alex Johnson</p>
-                        <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">HR Manager</p>
+                        <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium">HR Manager</p>
                     </div>
                     <button className="ml-auto text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
                         <span className="material-symbols-outlined text-lg">logout</span>

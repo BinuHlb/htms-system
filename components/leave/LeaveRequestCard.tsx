@@ -26,14 +26,14 @@ const LeaveRequestCard: React.FC<LeaveRequestCardProps> = ({
 
     return (
         <div className={`bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 border border-slate-100 dark:border-slate-800 shadow-sm transition-all hover:shadow-md ${className}`}>
-            <h3 className="text-xl font-black text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
                 <span className="material-symbols-outlined text-primary fill-1">add_circle</span>
                 Request Leave
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-4">
                     <div className="space-y-2">
-                        <label className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Leave Type</label>
+                        <label className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Leave Type</label>
                         <select
                             value={newLeave.type}
                             onChange={e => setNewLeave({ ...newLeave, type: e.target.value })}
@@ -48,7 +48,7 @@ const LeaveRequestCard: React.FC<LeaveRequestCardProps> = ({
 
                     <div className="grid grid-cols-1 gap-4">
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Start Date</label>
+                            <label className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Start Date</label>
                             <input
                                 required
                                 type="date"
@@ -58,7 +58,7 @@ const LeaveRequestCard: React.FC<LeaveRequestCardProps> = ({
                             />
                         </div>
                         <div className="space-y-2">
-                            <label className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">End Date</label>
+                            <label className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">End Date</label>
                             <input
                                 required
                                 type="date"
@@ -70,7 +70,7 @@ const LeaveRequestCard: React.FC<LeaveRequestCardProps> = ({
                     </div>
 
                     <div className="space-y-2">
-                        <label className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Reason for Leave</label>
+                        <label className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Reason for Leave</label>
                         <textarea
                             required
                             placeholder="Briefly describe your request..."
@@ -82,7 +82,7 @@ const LeaveRequestCard: React.FC<LeaveRequestCardProps> = ({
 
                     {/* File Upload */}
                     <div className="space-y-2">
-                        <label className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Attachments (Optional)</label>
+                        <label className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Attachments (Optional)</label>
                         <div className="relative group">
                             <input
                                 type="file"
@@ -91,10 +91,10 @@ const LeaveRequestCard: React.FC<LeaveRequestCardProps> = ({
                             />
                             <div className="border-2 border-dashed border-slate-100 dark:border-slate-800 rounded-2xl p-6 flex flex-col items-center justify-center transition-all group-hover:border-primary/40 group-hover:bg-primary/5">
                                 <span className="material-symbols-outlined text-slate-400 group-hover:text-primary mb-2">upload_file</span>
-                                <p className="text-[11px] font-black text-slate-600 dark:text-slate-400 uppercase tracking-widest">
+                                <p className="text-[11px] font-bold text-slate-600 dark:text-slate-400 uppercase tracking-widest">
                                     {fileName || 'Upload Doc/Image'}
                                 </p>
-                                <p className="text-[9px] font-bold text-slate-400 dark:text-slate-500 mt-1">Medical certificate, travel docs, etc.</p>
+                                <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 mt-1">Medical certificate, travel docs, etc.</p>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@ const LeaveRequestCard: React.FC<LeaveRequestCardProps> = ({
                             className="flex items-center justify-between cursor-pointer group/label"
                             onClick={() => setShowApprovers(!showApprovers)}
                         >
-                            <label className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1 cursor-pointer group-hover/label:text-primary transition-colors">
+                            <label className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1 cursor-pointer group-hover/label:text-primary transition-colors">
                                 Approvers ({approvers.length})
                             </label>
                             {!showApprovers && (
@@ -137,13 +137,13 @@ const LeaveRequestCard: React.FC<LeaveRequestCardProps> = ({
                                             )}
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                            <p className="text-[11px] font-black text-slate-900 dark:text-white truncate uppercase tracking-tight">{approver.name}</p>
-                                            <p className="text-[9px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">{approver.role}</p>
+                                            <p className="text-[11px] font-bold text-slate-900 dark:text-white truncate uppercase tracking-tight">{approver.name}</p>
+                                            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">{approver.role}</p>
                                         </div>
                                         <div className="size-2 rounded-full bg-slate-200 dark:bg-slate-700" />
                                     </div>
                                 ))}
-                                <p className="text-[9px] font-bold text-primary text-center mt-2 cursor-pointer hover:underline" onClick={() => setShowApprovers(false)}>
+                                <p className="text-[11px] font-bold text-primary text-center mt-2 cursor-pointer hover:underline" onClick={() => setShowApprovers(false)}>
                                     Hide Details
                                 </p>
                             </div>
@@ -153,7 +153,7 @@ const LeaveRequestCard: React.FC<LeaveRequestCardProps> = ({
 
                 <button
                     type="submit"
-                    className="w-full bg-primary hover:bg-primary/90 text-white py-5 rounded-[2rem] text-sm font-black uppercase tracking-widest shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all"
+                    className="w-full bg-primary hover:bg-primary/90 text-white py-5 rounded-[2rem] text-sm font-bold uppercase tracking-widest shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all"
                 >
                     Submit Request
                 </button>

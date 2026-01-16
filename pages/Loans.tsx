@@ -32,12 +32,12 @@ const Loans: React.FC = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {loanStats.map((card, i) => (
                                 <div key={i} className="bg-white dark:bg-slate-900 p-6 rounded-3xl transition-all shadow-sm border border-slate-50 dark:border-slate-800 hover:shadow-md">
-                                    <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{card.label}</p>
+                                    <p className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">{card.label}</p>
                                     <div className="flex items-baseline gap-2">
-                                        <h3 className="text-2xl font-black text-slate-900 dark:text-white">{card.val}</h3>
-                                        <span className={`text-[10px] font-bold ${card.tColor}`}>{card.trend}</span>
+                                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white">{card.val}</h3>
+                                        <span className={`text-[12px] font-bold ${card.tColor}`}>{card.trend}</span>
                                     </div>
-                                    <p className="text-[9px] text-slate-400 dark:text-slate-500 mt-3 uppercase tracking-widest font-black">{card.note}</p>
+                                    <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-3 uppercase tracking-widest font-bold">{card.note}</p>
                                 </div>
                             ))}
                         </div>
@@ -53,14 +53,14 @@ const Loans: React.FC = () => {
                 sidebar={
                     <div className="space-y-8 sticky top-8">
                         <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 border border-slate-100 dark:border-slate-800 shadow-sm transition-all hover:shadow-md">
-                            <h3 className="text-xl font-black text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
                                 <span className="material-symbols-outlined text-primary">add_circle</span>
                                 New Loan Request
                             </h3>
                             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                                 <div className="space-y-4">
                                     <div className="space-y-2">
-                                        <label className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Loan Amount</label>
+                                        <label className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Loan Amount</label>
                                         <div className="relative">
                                             <span className="absolute left-5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500 font-bold">$</span>
                                             <input
@@ -73,7 +73,7 @@ const Loans: React.FC = () => {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Purpose</label>
+                                        <label className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Purpose</label>
                                         <select className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl px-5 py-4 text-sm font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer appearance-none shadow-sm">
                                             <option>Personal Loan</option>
                                             <option>Education Loan</option>
@@ -83,7 +83,7 @@ const Loans: React.FC = () => {
                                     </div>
 
                                     <div className="space-y-2">
-                                        <label className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Repayment Term</label>
+                                        <label className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest ml-1">Repayment Term</label>
                                         <select className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-2xl px-5 py-4 text-sm font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer appearance-none shadow-sm">
                                             <option>6 Months</option>
                                             <option>12 Months</option>
@@ -94,7 +94,7 @@ const Loans: React.FC = () => {
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-primary hover:bg-primary/90 text-white py-5 rounded-[2rem] text-sm font-black uppercase tracking-widest shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all"
+                                    className="w-full bg-primary hover:bg-primary/90 text-white py-5 rounded-[2rem] text-sm font-bold uppercase tracking-widest shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all"
                                 >
                                     Submit Request
                                 </button>

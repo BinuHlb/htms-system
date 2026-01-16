@@ -37,7 +37,7 @@ const PageSubHeader: React.FC<PageSubHeaderProps> = ({
             <div className="space-y-1">
                 <div className="flex items-center gap-3">
                     {badge && (
-                        <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest rounded-full">
+                        <span className="px-3 py-1 bg-primary/10 text-primary text-[12px] font-bold uppercase tracking-widest rounded-full">
                             {badge}
                         </span>
                     )}
@@ -56,7 +56,7 @@ const PageSubHeader: React.FC<PageSubHeaderProps> = ({
                             <button
                                 key={tab.id}
                                 onClick={() => onTabChange?.(tab.id)}
-                                className={`px-6 py-2 rounded-xl text-xs font-black uppercase tracking-widest transition-all ${activeTab === tab.id
+                                className={`px-6 py-2 rounded-xl text-xs font-bold uppercase tracking-widest transition-all ${activeTab === tab.id
                                     ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm'
                                     : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
                                     }`}

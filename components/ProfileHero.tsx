@@ -33,8 +33,8 @@ const ProfileHero: React.FC<ProfileHeroProps> = ({
                     <div className={`absolute -bottom-2 -right-2 ${statusColor} size-8 rounded-full border-4 border-white dark:border-slate-900 shadow-lg`} />
                 </div>
                 <div className="pt-20 flex-1">
-                    <h2 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">{name}</h2>
-                    <div className="flex items-center gap-3 text-slate-500 dark:text-slate-400 font-bold uppercase text-[10px] tracking-widest mt-1">
+                    <h2 className="text-3xl font-bold text-slate-900 dark:text-white tracking-tight">{name}</h2>
+                    <div className="flex items-center gap-3 text-slate-500 dark:text-slate-400 font-bold uppercase text-[12px] tracking-widest mt-1">
                         <span>{role}</span>
                         <span className="size-1 rounded-full bg-slate-200 dark:bg-slate-700"></span>
                         <span>{employeeId}</span>
@@ -45,13 +45,13 @@ const ProfileHero: React.FC<ProfileHeroProps> = ({
                 <div className="pb-2 flex gap-3">
                     <button
                         onClick={onMessageClick}
-                        className="px-6 py-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-md transition-all"
+                        className="px-6 py-3 rounded-xl border border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800 text-xs font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 hover:bg-white dark:hover:bg-slate-700 hover:shadow-md transition-all"
                     >
                         Message
                     </button>
                     <button
                         onClick={onEditClick}
-                        className="px-6 py-3 rounded-xl bg-primary text-white text-xs font-black uppercase tracking-widest shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all"
+                        className="px-6 py-3 rounded-xl bg-primary text-white text-xs font-bold uppercase tracking-widest shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all"
                     >
                         Edit Profile
                     </button>

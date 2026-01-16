@@ -45,11 +45,11 @@ const WeeklyAttendanceCard: React.FC<WeeklyAttendanceCardProps> = ({
                         key={idx}
                         className={`${item.bg} dark:bg-slate-800/40 ${item.ring || ''} ${item.opacity || ''} p-5 rounded-2xl text-center transition-all hover:translate-y-[-2px] group cursor-default`}
                     >
-                        <p className="text-[10px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider transition-colors group-hover:text-primary">
+                        <p className="text-[12px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider transition-colors group-hover:text-primary">
                             {item.day}
                         </p>
                         <p className="text-2xl font-bold mt-2 text-slate-900 dark:text-white">{item.time}</p>
-                        <p className={`text-[10px] ${item.color} font-bold uppercase mt-2 tracking-tighter`}>
+                        <p className={`text-[12px] ${item.color} font-bold uppercase mt-2 tracking-tighter`}>
                             {item.status}
                         </p>
                     </div>
@@ -59,7 +59,7 @@ const WeeklyAttendanceCard: React.FC<WeeklyAttendanceCardProps> = ({
                 {stats.map((stat, idx) => (
                     <React.Fragment key={idx}>
                         <div className="flex flex-col">
-                            <span className="text-[10px] uppercase tracking-widest font-bold text-slate-400">{stat.label}</span>
+                            <span className="text-[12px] uppercase tracking-widest font-bold text-slate-400">{stat.label}</span>
                             <span className="text-xl font-bold text-slate-900 dark:text-white mt-1">{stat.value}</span>
                         </div>
                         {idx < stats.length - 1 && <div className="h-8 w-px bg-slate-100 dark:bg-slate-800"></div>}

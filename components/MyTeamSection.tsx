@@ -68,7 +68,7 @@ const MyTeamSection: React.FC<MyTeamSectionProps> = ({ teamMembers }) => {
                             <span className="material-symbols-outlined text-2xl fill-1">{opt.icon}</span>
                         </div>
                         <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">{opt.label}</p>
-                        <p className="text-2xl font-black text-slate-900">{opt.count}</p>
+                        <p className="text-2xl font-bold text-slate-900">{opt.count}</p>
                     </button>
                 ))}
             </div>
@@ -77,7 +77,7 @@ const MyTeamSection: React.FC<MyTeamSectionProps> = ({ teamMembers }) => {
             <div className="bg-white/40 backdrop-blur-xl rounded-[2rem] p-8 border border-white/20 shadow-xl">
                 <div className="flex items-center justify-between mb-8">
                     <div>
-                        <h3 className="text-2xl font-black text-slate-900 tracking-tight">
+                        <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
                             {filter === 'all' ? 'Team Overview' : filterOptions.find(o => o.id === filter)?.label}
                         </h3>
                         <p className="text-slate-500 font-medium mt-1">
@@ -115,11 +115,11 @@ const MyTeamSection: React.FC<MyTeamSectionProps> = ({ teamMembers }) => {
                                     <h4 className="font-bold text-slate-900 group-hover:text-primary transition-colors">{member.name}</h4>
                                     <p className="text-xs font-semibold text-slate-500">{member.role}</p>
                                     <div className="flex items-center gap-2 mt-1.5">
-                                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider ${getStatusStyle(member.status)}`}>
+                                        <span className={`px-2 py-0.5 rounded-full text-[12px] font-bold uppercase tracking-wider ${getStatusStyle(member.status)}`}>
                                             {getStatusLabel(member.status)}
                                         </span>
                                         {member.time && (
-                                            <span className="text-[10px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">
+                                            <span className="text-[12px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">
                                                 {member.time}
                                             </span>
                                         )}

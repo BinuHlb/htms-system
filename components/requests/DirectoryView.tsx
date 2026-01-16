@@ -10,7 +10,7 @@ const DirectoryView: React.FC = () => {
                     <span className="material-symbols-outlined text-blue-500 dark:text-blue-400 text-3xl fill-1">person_search</span>
                 </div>
                 <div>
-                    <h3 className="text-2xl font-black text-slate-900 dark:text-white">Employee Directory</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Employee Directory</h3>
                     <p className="text-slate-400 dark:text-slate-500 text-sm font-bold uppercase tracking-widest mt-1">Universal search for all organization personnel.</p>
                 </div>
             </div>

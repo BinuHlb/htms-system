@@ -52,8 +52,8 @@ const OtherRequests: React.FC = () => {
                 {/* Classic Sidebar Style */}
                 <aside className="lg:w-80 w-full flex-shrink-0 border-r border-slate-100 dark:border-slate-800 bg-slate-50/30 dark:bg-slate-900/30 p-8 space-y-10 flex flex-col self-stretch sticky top-16">
                     <div className="space-y-1.5 px-2">
-                        <h3 className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em]">Workspace</h3>
-                        <p className="text-sm font-black text-slate-900 dark:text-white">Corporate Headquarters</p>
+                        <h3 className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em]">Workspace</h3>
+                        <p className="text-sm font-bold text-slate-900 dark:text-white">Corporate Headquarters</p>
                     </div>
 
                     <nav className="space-y-1.5">
@@ -76,7 +76,7 @@ const OtherRequests: React.FC = () => {
                     </nav>
 
                     <div className="mt-auto p-6 bg-primary/5 dark:bg-primary/10 rounded-[2rem] border border-primary/10 dark:border-primary/20">
-                        <p className="text-[10px] font-black text-primary uppercase tracking-widest mb-2 flex items-center gap-2">
+                        <p className="text-[12px] font-bold text-primary uppercase tracking-widest mb-2 flex items-center gap-2">
                             <span className="relative flex h-2 w-2">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>

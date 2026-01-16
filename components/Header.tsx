@@ -130,20 +130,20 @@ const Header: React.FC = () => {
                 <div className="flex items-center gap-4">
                     {/* Time & Date Display */}
                     <div className="hidden lg:flex flex-col items-end border-r border-slate-200 dark:border-slate-800 pr-4">
-                        <span className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">{currentTime.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' })}</span>
-                        <span className="text-sm font-black text-slate-900 dark:text-white tabular-nums leading-none mt-1">{currentTime.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' })}</span>
+                        <span className="text-[12px] font-bold text-slate-400 uppercase tracking-[0.2em]">{currentTime.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' })}</span>
+                        <span className="text-sm font-bold text-slate-900 dark:text-white tabular-nums leading-none mt-1">{currentTime.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' })}</span>
                     </div>
 
                     {isClockedIn && (
                         <div className="flex flex-col items-center px-4 bg-slate-50 dark:bg-slate-800 rounded-xl py-1 animate-in fade-in slide-in-from-top-2">
-                            <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest flex items-center gap-1.5 opacity-60">
+                            <span className="text-[12px] font-bold text-slate-400 uppercase tracking-widest flex items-center gap-1.5 opacity-60">
                                 <span className="relative flex h-1.5 w-1.5">
                                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                     <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
                                 </span>
                                 On Clock
                             </span>
-                            <span className="text-base font-black text-slate-900 dark:text-white tabular-nums leading-none tracking-tight">
+                            <span className="text-base font-bold text-slate-900 dark:text-white tabular-nums leading-none tracking-tight">
                                 {new Date(elapsedTime * 1000).toISOString().substr(11, 8)}
                             </span>
                         </div>
@@ -159,7 +159,7 @@ const Header: React.FC = () => {
                                 className={`absolute right-4 flex items-center pointer-events-none transition-all duration-300
                                 ${isDragging ? 'opacity-0 translate-x-4' : 'opacity-100 translate-x-0'}`}
                             >
-                                <span className="text-[10px] font-black uppercase tracking-[0.12em] text-slate-500 flex items-center gap-1.5">
+                                <span className="text-[12px] font-bold uppercase tracking-[0.12em] text-slate-500 flex items-center gap-1.5">
                                     Slide to Clock In
                                     <span className="material-symbols-outlined text-sm animate-pulse">chevron_right</span>
                                 </span>
@@ -171,7 +171,7 @@ const Header: React.FC = () => {
                                 className={`absolute left-4 flex items-center pointer-events-none transition-all duration-300
                                 ${isDragging ? 'opacity-0 -translate-x-4' : 'opacity-100 translate-x-0'}`}
                             >
-                                <span className="text-[10px] font-black uppercase tracking-[0.12em] text-red-400 flex items-center gap-1.5">
+                                <span className="text-[12px] font-bold uppercase tracking-[0.12em] text-red-400 flex items-center gap-1.5">
                                     <span className="material-symbols-outlined text-sm animate-pulse rotate-180">chevron_right</span>
                                     Slide to Clock Out
                                 </span>
@@ -232,8 +232,8 @@ const Header: React.FC = () => {
                     {isProfileOpen && (
                         <div className="absolute right-0 mt-3 w-64 bg-white dark:bg-[#111722] rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-800 p-2 animate-in fade-in zoom-in-95 duration-200 origin-top-right">
                             <div className="px-4 py-4 border-b border-slate-50 dark:border-slate-800/50">
-                                <p className="text-sm font-black text-slate-900 dark:text-white">Alex Johnson</p>
-                                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">Senior Product Designer</p>
+                                <p className="text-sm font-bold text-slate-900 dark:text-white">Alex Johnson</p>
+                                <p className="text-[12px] font-bold text-slate-400 uppercase tracking-widest mt-0.5">Senior Product Designer</p>
                             </div>
 
                             <div className="p-1 space-y-1">

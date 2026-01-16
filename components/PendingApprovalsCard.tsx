@@ -34,7 +34,7 @@ const PendingApprovalsCard: React.FC<PendingApprovalsCardProps> = ({
                 <h3 className="font-bold text-lg flex items-center gap-2 text-slate-900 dark:text-white">
                     <span className="material-symbols-outlined text-primary fill-1">{icon}</span>
                     {title}
-                    <span className="bg-primary text-white text-[10px] px-2 py-0.5 rounded-full ml-2 font-bold uppercase tracking-tighter">
+                    <span className="bg-primary text-white text-[12px] px-2 py-0.5 rounded-full ml-2 font-bold uppercase tracking-tighter">
                         {count} {count === 1 ? 'Request' : 'Requests'}
                     </span>
                 </h3>

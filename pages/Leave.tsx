@@ -129,9 +129,9 @@ const Leave: React.FC = () => {
                         />
 
                         <div className="bg-white dark:bg-slate-900 rounded-[2.5rem] p-8 border border-slate-100 dark:border-slate-800 shadow-sm">
-                            <h3 className="text-xl font-black text-slate-900 dark:text-white mb-6 flex items-center justify-between">
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center justify-between">
                                 Team Leave Overview
-                                <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest rounded-full">January 2026</span>
+                                <span className="px-3 py-1 bg-primary/10 text-primary text-[12px] font-bold uppercase tracking-widest rounded-full">January 2026</span>
                             </h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {teamLeaves.map((member) => (
@@ -143,14 +143,14 @@ const Leave: React.FC = () => {
                                             />
                                             <div>
                                                 <p className="font-bold text-slate-900 dark:text-white">{member.name}</p>
-                                                <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">{member.type} Leave</p>
+                                                <p className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">{member.type} Leave</p>
                                             </div>
                                         </div>
                                         <div className="text-right">
-                                            <p className="text-xs font-black text-primary uppercase tracking-tighter">
+                                            <p className="text-xs font-bold text-primary uppercase tracking-tighter">
                                                 {member.dates[0]} to {member.dates[member.dates.length - 1]}
                                             </p>
-                                            <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500">({member.dates.length} Days)</p>
+                                            <p className="text-[12px] font-bold text-slate-400 dark:text-slate-500">({member.dates.length} Days)</p>
                                         </div>
                                     </div>
                                 ))}

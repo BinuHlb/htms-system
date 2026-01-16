@@ -106,7 +106,7 @@ const LeavePlanningCalendar: React.FC<LeavePlanningCalendarProps> = ({
                         <span className="material-symbols-outlined text-xl">chevron_left</span>
                     </button>
                     <div className="px-4 min-w-[160px] text-center">
-                        <span className="text-sm font-black text-slate-900 dark:text-white">{monthName} {year}</span>
+                        <span className="text-sm font-bold text-slate-900 dark:text-white">{monthName} {year}</span>
                     </div>
                     <button
                         onClick={() => changeMonth(1)}
@@ -119,7 +119,7 @@ const LeavePlanningCalendar: React.FC<LeavePlanningCalendarProps> = ({
 
             <div className="grid grid-cols-7 gap-px bg-slate-100 dark:bg-slate-800 border border-slate-100 dark:border-slate-700 rounded-[24px] overflow-hidden shadow-inner">
                 {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(d => (
-                    <div key={d} className="py-4 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-sm text-[10px] font-black uppercase text-slate-400 dark:text-slate-500 tracking-widest text-center">
+                    <div key={d} className="py-4 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-sm text-[12px] font-bold uppercase text-slate-400 dark:text-slate-500 tracking-widest text-center">
                         {d}
                     </div>
                 ))}
@@ -148,15 +148,15 @@ const LeavePlanningCalendar: React.FC<LeavePlanningCalendarProps> = ({
 
                             <div className="mt-2 space-y-1">
                                 {selected && (
-                                    <div className="bg-primary text-[9px] text-white px-2 py-1 rounded-lg border border-primary/20 flex items-center gap-1.5 animate-in zoom-in-95 duration-300 shadow-sm">
+                                    <div className="bg-primary text-[11px] text-white px-2 py-1 rounded-lg border border-primary/20 flex items-center gap-1.5 animate-in zoom-in-95 duration-300 shadow-sm">
                                         <div className="size-1 bg-white rounded-full animate-pulse"></div>
-                                        <span className="font-black uppercase tracking-tighter">Your Plan</span>
+                                        <span className="font-bold uppercase tracking-tighter">Your Plan</span>
                                     </div>
                                 )}
                                 {teamOnLeave && (
-                                    <div className="bg-rose-50 dark:bg-rose-500/10 text-[9px] text-rose-500 dark:text-rose-400 px-2 py-1 rounded-lg border border-rose-100 dark:border-rose-500/20 flex items-center gap-1.5 animate-in slide-in-from-bottom-2 duration-300">
+                                    <div className="bg-rose-50 dark:bg-rose-500/10 text-[11px] text-rose-500 dark:text-rose-400 px-2 py-1 rounded-lg border border-rose-100 dark:border-rose-500/20 flex items-center gap-1.5 animate-in slide-in-from-bottom-2 duration-300">
                                         <div className="size-1 bg-rose-500 dark:bg-rose-400 rounded-full"></div>
-                                        <span className="font-black uppercase tracking-tighter">Team Off</span>
+                                        <span className="font-bold uppercase tracking-tighter">Team Off</span>
                                     </div>
                                 )}
                             </div>
@@ -170,18 +170,18 @@ const LeavePlanningCalendar: React.FC<LeavePlanningCalendarProps> = ({
             <div className="mt-8 flex flex-wrap gap-6 items-center border-t border-slate-50 dark:border-slate-800 pt-8">
                 <div className="flex items-center gap-2">
                     <div className="size-3 rounded-full bg-primary shadow-[0_0_8px_rgba(var(--primary-rgb),0.4)]"></div>
-                    <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest">Selected</span>
+                    <span className="text-[12px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Selected</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <div className="size-3 rounded-full bg-primary/10 dark:bg-primary/20 border border-primary/20"></div>
-                    <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest">Available</span>
+                    <span className="text-[12px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Available</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <div className="size-3 rounded-full bg-slate-100 dark:bg-slate-800"></div>
-                    <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest">Other Month</span>
+                    <span className="text-[12px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest">Other Month</span>
                 </div>
                 <div className="ml-auto">
-                    <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">
+                    <p className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest">
                         {selectedDates.length} {selectedDates.length === 1 ? 'Day' : 'Days'} Planned
                     </p>
                 </div>

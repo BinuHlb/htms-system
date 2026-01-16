@@ -24,7 +24,7 @@ const MiniStatsCard: React.FC<MiniStatsCardProps> = ({ items }) => {
                         </div>
                         <span className="text-sm font-bold text-slate-700 dark:text-slate-300">{item.label}</span>
                     </div>
-                    <span className="text-sm font-black text-slate-900 dark:text-white">{item.value}</span>
+                    <span className="text-sm font-bold text-slate-900 dark:text-white">{item.value}</span>
                 </div>
             ))}
         </div>

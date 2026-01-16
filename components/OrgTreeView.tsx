@@ -20,12 +20,12 @@ const OrgTreeView: React.FC<OrgTreeViewProps> = ({ data }) => {
                             <div className="size-14 rounded-2xl bg-slate-700 border-2 border-slate-600 bg-center bg-cover shadow-inner group-hover:border-primary transition-colors"
                                 style={{ backgroundImage: `url('${data.avatar}')` }}></div>
                             <div>
-                                <p className="font-black text-sm tracking-tight">{data.name}</p>
-                                <p className="text-[10px] uppercase tracking-[0.15em] text-slate-400 font-bold mt-0.5">{data.role}</p>
+                                <p className="font-bold text-sm tracking-tight">{data.name}</p>
+                                <p className="text-[12px] uppercase tracking-[0.15em] text-slate-400 font-bold mt-0.5">{data.role}</p>
                             </div>
                         </div>
                         {/* Status chip */}
-                        <div className="absolute -top-2 -right-2 px-3 py-1 bg-primary rounded-full text-[8px] font-black uppercase tracking-widest shadow-lg">Head Office</div>
+                        <div className="absolute -top-2 -right-2 px-3 py-1 bg-primary rounded-full text-[10px] font-bold uppercase tracking-widest shadow-lg">Head Office</div>
                     </div>
                     <div className="h-12 w-px bg-gradient-to-b from-slate-200 to-slate-100"></div>
                 </div>
@@ -42,18 +42,18 @@ const OrgTreeView: React.FC<OrgTreeViewProps> = ({ data }) => {
 
                             <div className="mt-8 p-5 rounded-[24px] bg-white border border-slate-100 w-60 shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-500 cursor-pointer group group">
                                 <div className="flex items-center gap-4">
-                                    <div className="size-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center font-black text-xs group-hover:bg-primary group-hover:text-white transition-all">
+                                    <div className="size-12 rounded-2xl bg-primary/5 text-primary flex items-center justify-center font-bold text-xs group-hover:bg-primary group-hover:text-white transition-all">
                                         {dept.role.substring(0, 2).toUpperCase()}
                                     </div>
                                     <div>
-                                        <p className="font-black text-sm text-slate-900 leading-tight">VP of {dept.role}</p>
-                                        <p className="text-[10px] text-slate-400 font-black uppercase tracking-widest mt-1.5 flex items-center gap-1.5">
+                                        <p className="font-bold text-sm text-slate-900 leading-tight">VP of {dept.role}</p>
+                                        <p className="text-[12px] text-slate-400 font-bold uppercase tracking-widest mt-1.5 flex items-center gap-1.5">
                                             <span className="size-1 rounded-full bg-emerald-500" />
                                             {dept.reports} Reports
                                         </p>
                                     </div>
                                 </div>
-                                <div className="mt-4 flex justify-between items-center text-[9px] font-black text-slate-300 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div className="mt-4 flex justify-between items-center text-[11px] font-bold text-slate-300 uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity">
                                     <span>Expand Team</span>
                                     <span className="material-symbols-outlined text-[14px]">chevron_right</span>
                                 </div>
@@ -66,7 +66,7 @@ const OrgTreeView: React.FC<OrgTreeViewProps> = ({ data }) => {
                                     <div className="p-4 rounded-2xl bg-primary/5 border border-primary/20 w-52 shadow-sm shadow-primary/5">
                                         <div className="flex items-center gap-3">
                                             <div className="size-2 rounded-full bg-primary animate-pulse" />
-                                            <p className="text-[10px] font-black text-primary uppercase tracking-widest">Active Workspace</p>
+                                            <p className="text-[12px] font-bold text-primary uppercase tracking-widest">Active Workspace</p>
                                         </div>
                                         <p className="text-[11px] font-bold text-slate-600 mt-2">Your current team is situated within this department.</p>
                                     </div>
@@ -81,11 +81,11 @@ const OrgTreeView: React.FC<OrgTreeViewProps> = ({ data }) => {
             <div className="absolute bottom-8 left-8 flex items-center gap-4 bg-white/80 backdrop-blur-sm p-3 rounded-2xl border border-slate-100 shadow-sm">
                 <div className="flex items-center gap-2">
                     <span className="size-2 bg-slate-900 rounded-full" />
-                    <span className="text-[9px] font-black uppercase text-slate-400">Executive</span>
+                    <span className="text-[11px] font-bold uppercase text-slate-400">Executive</span>
                 </div>
                 <div className="flex items-center gap-2">
                     <span className="size-2 bg-primary rounded-full" />
-                    <span className="text-[9px] font-black uppercase text-slate-400">Department</span>
+                    <span className="text-[11px] font-bold uppercase text-slate-400">Department</span>
                 </div>
             </div>
         </div>

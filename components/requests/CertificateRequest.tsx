@@ -17,7 +17,7 @@ const CertificateRequest: React.FC = () => {
                     <span className="material-symbols-outlined text-amber-500 dark:text-amber-400 text-3xl fill-1">description</span>
                 </div>
                 <div>
-                    <h3 className="text-2xl font-black text-slate-900 dark:text-white">Certificate Request</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Certificate Request</h3>
                     <p className="text-slate-400 dark:text-slate-500 text-sm font-bold uppercase tracking-widest mt-1">Generate and request official HR documentation.</p>
                 </div>
             </div>
@@ -30,8 +30,8 @@ const CertificateRequest: React.FC = () => {
                                 <span className={`material-symbols-outlined text-${cert.color}-500 dark:text-${cert.color}-400 text-2xl`}>{cert.icon}</span>
                             </div>
                             <div className="flex-1">
-                                <h4 className="text-lg font-black text-slate-900 dark:text-white group-hover:text-primary transition-colors">{cert.title}</h4>
-                                <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-0.5">{cert.sub}</p>
+                                <h4 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">{cert.title}</h4>
+                                <p className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-0.5">{cert.sub}</p>
                             </div>
                             <div className="size-10 rounded-full bg-white dark:bg-slate-700 flex items-center justify-center shadow-sm opacity-0 group-hover:opacity-100 transition-all -translate-x-2 group-hover:translate-x-0">
                                 <span className="material-symbols-outlined text-primary">chevron_right</span>

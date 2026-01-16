@@ -37,7 +37,7 @@ const NewsCard: React.FC<NewsCardProps> = ({
                         onClick={() => onItemClick?.(item)}
                         className="p-6 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer group"
                     >
-                        <p className="text-[10px] text-primary font-bold mb-2 uppercase tracking-widest">{item.date}</p>
+                        <p className="text-[12px] text-primary font-bold mb-2 uppercase tracking-widest">{item.date}</p>
                         <h4 className="font-bold text-sm leading-snug text-slate-900 dark:text-white group-hover:text-primary transition-colors">
                             {item.title}
                         </h4>

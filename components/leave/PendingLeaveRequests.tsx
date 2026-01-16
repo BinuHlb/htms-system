@@ -30,7 +30,7 @@ const PendingLeaveRequests: React.FC<PendingLeaveRequestsProps> = ({ requests })
 
     return (
         <div className="space-y-4 mb-8">
-            <h3 className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] ml-2">
+            <h3 className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] ml-2">
                 Pending Requests ({requests.length})
             </h3>
 
@@ -54,10 +54,10 @@ const PendingLeaveRequests: React.FC<PendingLeaveRequestsProps> = ({ requests })
                                         <span className="material-symbols-outlined text-primary text-2xl">event_upcoming</span>
                                     </div>
                                     <div>
-                                        <h4 className="font-black text-slate-900 dark:text-white text-base tracking-tight">
+                                        <h4 className="font-bold text-slate-900 dark:text-white text-base tracking-tight">
                                             {request.type}
                                         </h4>
-                                        <p className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-0.5">
+                                        <p className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-0.5">
                                             {request.start} — {request.end}
                                         </p>
                                     </div>
@@ -70,7 +70,7 @@ const PendingLeaveRequests: React.FC<PendingLeaveRequestsProps> = ({ requests })
                                                 {request.approvers.map((a, i) => (
                                                     <div
                                                         key={i}
-                                                        className={`size-5 rounded-full border-2 border-white dark:border-slate-900 flex items-center justify-center text-[8px] font-black
+                                                        className={`size-5 rounded-full border-2 border-white dark:border-slate-900 flex items-center justify-center text-[10px] font-bold
                                                             ${a.status === 'approved' ? 'bg-emerald-500 text-white' : a.status === 'rejected' ? 'bg-rose-500 text-white' : 'bg-slate-100 dark:bg-slate-800 text-slate-400'}
                                                         `}
                                                     >
@@ -78,7 +78,7 @@ const PendingLeaveRequests: React.FC<PendingLeaveRequestsProps> = ({ requests })
                                                     </div>
                                                 ))}
                                             </div>
-                                            <p className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-tighter">
+                                            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-tighter">
                                                 {approvedCount}/{request.approvers.length} Approved
                                             </p>
                                         </div>
@@ -86,10 +86,10 @@ const PendingLeaveRequests: React.FC<PendingLeaveRequestsProps> = ({ requests })
 
                                     <div className="flex items-center gap-4">
                                         <div className="text-right flex flex-col items-end">
-                                            <span className="text-base font-black text-slate-900 dark:text-white leading-none">
+                                            <span className="text-base font-bold text-slate-900 dark:text-white leading-none">
                                                 {request.days}
                                             </span>
-                                            <span className="text-[8px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-tighter mt-0.5">
+                                            <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-tighter mt-0.5">
                                                 Days
                                             </span>
                                         </div>
@@ -116,17 +116,17 @@ const PendingLeaveRequests: React.FC<PendingLeaveRequestsProps> = ({ requests })
                                                                 : 'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700'}
                                                     `}>
                                                         {approver.status === 'approved' && (
-                                                            <span className="material-symbols-outlined text-white text-[12px] font-black">check</span>
+                                                            <span className="material-symbols-outlined text-white text-[12px] font-bold">check</span>
                                                         )}
                                                         {approver.status === 'rejected' && (
-                                                            <span className="material-symbols-outlined text-white text-[12px] font-black">close</span>
+                                                            <span className="material-symbols-outlined text-white text-[12px] font-bold">close</span>
                                                         )}
                                                     </div>
                                                     <div className="text-center">
-                                                        <p className="text-[10px] font-black text-slate-900 dark:text-white uppercase tracking-tighter leading-none">
+                                                        <p className="text-[12px] font-bold text-slate-900 dark:text-white uppercase tracking-tighter leading-none">
                                                             {approver.role}
                                                         </p>
-                                                        <p className="text-[8px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-tighter mt-1">
+                                                        <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-tighter mt-1">
                                                             {approver.name}
                                                         </p>
                                                     </div>

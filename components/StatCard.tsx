@@ -76,14 +76,14 @@ const StatCard: React.FC<StatCardProps> = ({
             {(footerLeft || footerRight) && (
                 <div className="mt-4 pt-4 border-t border-slate-50 dark:border-slate-800 flex items-center justify-between opacity-60 group-hover:opacity-100 transition-opacity">
                     {footerLeft && (
-                        <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
+                        <span className="text-[12px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">
                             {footerLeft}
                         </span>
                     )}
                     {footerRight && (
                         <span
                             onClick={onFooterRightClick}
-                            className={`text-[10px] font-bold text-${color} cursor-pointer hover:underline uppercase tracking-wider`}
+                            className={`text-[12px] font-bold text-${color} cursor-pointer hover:underline uppercase tracking-wider`}
                         >
                             {footerRight}
                         </span>

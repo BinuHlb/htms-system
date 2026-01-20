@@ -41,24 +41,7 @@ const Profiles: React.FC = () => {
 
     return (
         <div className="p-8 max-w-7xl mx-auto w-full space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <PageSubHeader
-                actions={[
-                    {
-                        id: 'export-cv',
-                        label: 'Export CV',
-                        icon: 'print',
-                        variant: 'secondary',
-                        onClick: () => console.log('Export CV')
-                    },
-                    {
-                        id: 'payslip',
-                        label: 'Download Payslip',
-                        icon: 'download',
-                        variant: 'secondary',
-                        onClick: () => console.log('Download payslip')
-                    }
-                ]}
-            />
+            <PageSubHeader />
 
             <PageContent
                 layout="standard"
@@ -80,6 +63,15 @@ const Profiles: React.FC = () => {
                                 icon="contact_phone"
                                 items={contactItems}
                                 onEditClick={() => console.log('Edit contact')}
+                                actions={
+                                    <button
+                                        onClick={() => console.log('Export CV')}
+                                        className="size-10 rounded-xl flex items-center justify-center text-slate-400 hover:bg-primary/10 hover:text-primary transition-all group"
+                                        title="Export CV"
+                                    >
+                                        <span className="material-symbols-outlined text-[20px] group-hover:fill-1">print</span>
+                                    </button>
+                                }
                             />
                             <InfoCard
                                 title="Identification"

@@ -60,20 +60,11 @@ const Dashboard: React.FC = () => {
         }
     ];
 
-    const dashboardActions: PageAction[] = [
-        {
-            id: 'suggestion',
-            label: 'Submit Suggestion',
-            icon: 'lightbulb',
-            onClick: () => console.log('Opening suggestion form...')
-        }
-    ];
+
 
     return (
         <div className="p-8 max-w-[1400px] mx-auto w-full space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <PageSubHeader
-                actions={dashboardActions}
-            />
+            <PageSubHeader />
 
             <PageContent
                 layout="standard"
@@ -102,6 +93,23 @@ const Dashboard: React.FC = () => {
                 }
                 sidebar={
                     <>
+                        <button
+                            onClick={() => console.log('Opening suggestion form...')}
+                            className="w-full group relative p-4 bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-[2rem] shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-4 overflow-hidden"
+                        >
+                            <div className="size-11 rounded-2xl bg-primary/5 dark:bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                <span className="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform duration-300">lightbulb</span>
+                            </div>
+                            <div className="flex flex-col items-start">
+                                <span className="text-sm font-bold text-slate-900 dark:text-white">Submit Suggestion</span>
+                                <span className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mt-0.5">Share your ideas</span>
+                            </div>
+                            <div className="ml-auto size-8 rounded-full flex items-center justify-center text-slate-300 group-hover:text-primary transition-colors">
+                                <span className="material-symbols-outlined text-xl">chevron_right</span>
+                            </div>
+                            <div className="absolute top-0 right-0 size-24 bg-primary/5 rounded-full -mr-12 -mt-12 blur-3xl group-hover:bg-primary/20 transition-all duration-700" />
+                        </button>
+
                         {/* Leave Balance */}
                         <StatCard
                             title="Annual Leave"

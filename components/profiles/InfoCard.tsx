@@ -11,6 +11,7 @@ interface InfoCardProps {
     items: InfoItem[];
     onEditClick?: () => void;
     editable?: boolean;
+    actions?: React.ReactNode;
 }
 
 const InfoCard: React.FC<InfoCardProps> = ({
@@ -19,6 +20,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
     items,
     onEditClick,
     editable = true,
+    actions,
 }) => {
     return (
         <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 space-y-8 h-full border border-transparent dark:border-slate-800">
@@ -27,14 +29,18 @@ const InfoCard: React.FC<InfoCardProps> = ({
                     <span className="material-symbols-outlined text-primary fill-1">{icon}</span>
                     {title}
                 </h3>
-                {editable && (
-                    <button
-                        onClick={onEditClick}
-                        className="text-primary font-bold uppercase text-[12px] tracking-widest hover:underline"
-                    >
-                        Edit
-                    </button>
-                )}
+                <div className="flex items-center gap-2">
+                    {actions}
+                    {editable && (
+                        <button
+                            onClick={onEditClick}
+                            className="size-10 rounded-xl flex items-center justify-center text-slate-400 hover:bg-primary/10 hover:text-primary transition-all group"
+                            title="Edit Section"
+                        >
+                            <span className="material-symbols-outlined text-[20px] group-hover:fill-1">edit</span>
+                        </button>
+                    )}
+                </div>
             </div>
             <div className="space-y-6">
                 {items.map((item, idx) => (

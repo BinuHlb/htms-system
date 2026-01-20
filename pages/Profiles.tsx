@@ -1,9 +1,9 @@
 import React from 'react';
-import PageSubHeader from '../components/PageSubHeader';
-import PageContent from '../components/PageContent';
-import ProfileHero from '../components/ProfileHero';
-import InfoCard from '../components/InfoCard';
-import CompanyDirectory from '../components/CompanyDirectory';
+import PageSubHeader from '../components/common/PageSubHeader';
+import PageContent from '../components/common/PageContent';
+import ProfileHero from '../components/profiles/ProfileHero';
+import InfoCard from '../components/profiles/InfoCard';
+import CompanyDirectory from '../components/profiles/CompanyDirectory';
 
 const Profiles: React.FC = () => {
     const directory = [
@@ -42,8 +42,6 @@ const Profiles: React.FC = () => {
     return (
         <div className="p-8 max-w-7xl mx-auto w-full space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <PageSubHeader
-                title="Profile & Directory"
-                subtitle="View personal records and connect with your colleagues."
                 actions={[
                     {
                         id: 'export-cv',

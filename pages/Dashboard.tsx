@@ -1,11 +1,11 @@
 import React from 'react';
-import StatCard from '../components/StatCard';
-import NewsCard, { NewsItem } from '../components/NewsCard';
-import MiniStatsCard, { MiniStatItem } from '../components/MiniStatsCard';
-import PendingApprovalsCard, { ApprovalItem } from '../components/PendingApprovalsCard';
-import WeeklyAttendanceCard, { AttendanceDay, AttendanceStat } from '../components/WeeklyAttendanceCard';
-import PageSubHeader, { PageAction } from '../components/PageSubHeader';
-import PageContent from '../components/PageContent';
+import StatCard from '../components/dashboard/StatCard';
+import NewsCard, { NewsItem } from '../components/dashboard/NewsCard';
+import MiniStatsCard, { MiniStatItem } from '../components/dashboard/MiniStatsCard';
+import PendingApprovalsCard, { ApprovalItem } from '../components/dashboard/PendingApprovalsCard';
+import WeeklyAttendanceCard, { AttendanceDay, AttendanceStat } from '../components/dashboard/WeeklyAttendanceCard';
+import PageSubHeader, { PageAction } from '../components/common/PageSubHeader';
+import PageContent from '../components/common/PageContent';
 
 const Dashboard: React.FC = () => {
     const attendanceData: AttendanceDay[] = [
@@ -72,8 +72,6 @@ const Dashboard: React.FC = () => {
     return (
         <div className="p-8 max-w-[1400px] mx-auto w-full space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <PageSubHeader
-                title="Dashboard Overview"
-                subtitle="Welcome back, Alex. Here's what's happening today."
                 actions={dashboardActions}
             />
 

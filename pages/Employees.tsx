@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import PageSubHeader from '../components/PageSubHeader';
-import PageContent from '../components/PageContent';
-import TeamPerformanceCard from '../components/TeamPerformanceCard';
-import AnnouncementCard from '../components/AnnouncementCard';
-import EmployeeDirectoryView from '../components/EmployeeDirectoryView';
-import OrgTreeView from '../components/OrgTreeView';
+import PageSubHeader from '../components/common/PageSubHeader';
+import PageContent from '../components/common/PageContent';
+import TeamPerformanceCard from '../components/employees/TeamPerformanceCard';
+import AnnouncementCard from '../components/employees/AnnouncementCard';
+import EmployeeDirectoryView from '../components/employees/EmployeeDirectoryView';
+import OrgTreeView from '../components/employees/OrgTreeView';
 import { employeesData, orgStructureData } from '../data/employees';
-import MyTeamSection from '../components/MyTeamSection';
+import MyTeamSection from '../components/employees/MyTeamSection';
 
 const Employees: React.FC = () => {
     const [activeTab, setActiveTab] = useState<'directory' | 'org' | 'team'>('team');
@@ -58,13 +58,12 @@ const Employees: React.FC = () => {
     return (
         <div className="p-8 max-w-[1400px] mx-auto w-full space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <PageSubHeader
-                title="Personnel & Structure"
-                subtitle="Manage personnel, view structure, and track team progress."
                 actions={[
                     {
                         id: 'add',
                         label: 'Add Employee',
                         icon: 'person_add',
+                        variant: 'ghost',
                         onClick: () => console.log('Add employee')
                     }
                 ]}

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Page } from '../types';
+import { Page } from '../../types';
 
 interface SidebarProps {
     activePage: Page;

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { EmployeeData } from '../data/employees';
+import { EmployeeData } from '../../data/employees';
 
 interface EmployeeDirectoryViewProps {
     employees: EmployeeData[];

@@ -1,5 +1,5 @@
 import React from 'react';
-import EmployeeDirectoryView from '../EmployeeDirectoryView';
+import EmployeeDirectoryView from '../employees/EmployeeDirectoryView';
 import { employeesData } from '../../data/employees';
 
 const DirectoryView: React.FC = () => {

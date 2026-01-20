@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import PageSubHeader from '../components/PageSubHeader';
-import PageContent from '../components/PageContent';
-import RosterGrid from '../components/RosterGrid';
+import PageSubHeader from '../components/common/PageSubHeader';
+import PageContent from '../components/common/PageContent';
+import RosterGrid from '../components/attendance/RosterGrid';
 
 const ATTENDANCE_TABS = [
     { id: 'my', label: 'My Attendance' },
@@ -191,9 +191,6 @@ const Attendance: React.FC = () => {
     return (
         <div className="p-8 max-w-[1600px] mx-auto w-full space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <PageSubHeader
-                title="Attendance & Scheduling"
-                subtitle="Manage employee shifts, week schemas, and department rotations."
-                badge="Manager Portal"
                 tabs={ATTENDANCE_TABS as any}
                 activeTab={activeTab}
                 onTabChange={(id) => setActiveTab(id as any)}

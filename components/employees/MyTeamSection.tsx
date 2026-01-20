@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { EmployeeData } from '../data/employees';
+import { EmployeeData } from '../../data/employees';
 
 interface TeamMemberStatus extends EmployeeData {
     status: 'off' | 'not-checked-in' | 'late' | 'on-time';

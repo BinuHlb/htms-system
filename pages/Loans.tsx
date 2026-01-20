@@ -1,7 +1,6 @@
 import React from 'react';
-import PageSubHeader from '../components/PageSubHeader';
-import LoanProgressCard from '../components/LoanProgressCard';
-import PageContent from '../components/PageContent';
+import LoanProgressCard from '../components/loans/LoanProgressCard';
+import PageContent from '../components/common/PageContent';
 
 const Loans: React.FC = () => {
     const loanStats = [
@@ -12,10 +11,7 @@ const Loans: React.FC = () => {
 
     return (
         <div className="p-8 max-w-[1400px] mx-auto w-full space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <PageSubHeader
-                title="Loan Management"
-                subtitle="Manage your active loans and check repayment progress."
-            />
+
 
             <PageContent
                 layout="standard"

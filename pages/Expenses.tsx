@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import PageSubHeader from '../components/PageSubHeader';
-import PageContent from '../components/PageContent';
+import PageContent from '../components/common/PageContent';
 
 const Expenses: React.FC = () => {
     const [claimType, setClaimType] = useState('domestic');
@@ -12,10 +11,7 @@ const Expenses: React.FC = () => {
 
     return (
         <div className="p-8 max-w-[1400px] mx-auto w-full space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <PageSubHeader
-                title="Expense Claims"
-                subtitle="Submit reimbursement claims and check approval status."
-            />
+
 
             <PageContent
                 layout="standard"

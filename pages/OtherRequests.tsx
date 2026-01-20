@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PageSubHeader from '../components/PageSubHeader';
 import PassportWithdrawal from '../components/requests/PassportWithdrawal';
 import CertificateRequest from '../components/requests/CertificateRequest';
 import PasswordChange from '../components/requests/PasswordChange';
@@ -43,10 +42,7 @@ const OtherRequests: React.FC = () => {
 
     return (
         <div className="p-8 max-w-[1400px] mx-auto w-full space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <PageSubHeader
-                title="Requests & Hub"
-                subtitle="A centralized action center for unified organization-wide requests."
-            />
+
 
             <div className="flex flex-col lg:flex-row gap-0 items-start -mx-8 -mb-8 min-h-[calc(100vh-200px)]">
                 {/* Classic Sidebar Style */}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PageContent from '../components/PageContent';
+import PageContent from '../components/common/PageContent';
 import LeaveBalanceCard, { LeaveBalance } from '../components/leave/LeaveBalanceCard';
 import LeavePlanningCalendar from '../components/leave/LeavePlanningCalendar';
 import LeaveHistoryCard, { LeaveHistoryItem } from '../components/leave/LeaveHistoryCard';

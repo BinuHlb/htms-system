@@ -1,5 +1,5 @@
 import React from 'react';
-import { OrgNode } from '../data/employees';
+import { OrgNode } from '../../data/employees';
 
 interface OrgTreeViewProps {
     data: OrgNode;
